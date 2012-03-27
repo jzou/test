@@ -26,7 +26,7 @@ public class helloWorld extends GraphicsProgram {
 			}
 			pause(50);
 		}		
-	
+		
 		
 //		GImage image = new GImage ("IMG_1381.JPG");
 //		add(image, 0, 0);

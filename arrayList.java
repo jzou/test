@@ -19,7 +19,12 @@ public class arrayList extends ConsoleProgram {
 			sList.add(line);
 		}
 		
-		for (int i=0; i<sList.size(); i++){
+		Iterator<String> it = sList.iterator();
+		while (it.hasNext()){
+			System.out.println(it.next());
+		}
+				
+		 for (int i=0; i<sList.size(); i++){
 			System.out.println(sList.get(i));
 		}
 		
