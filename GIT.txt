@@ -1,0 +1,5 @@
+CD D:
+CD USERS/JIEZOU/WORKSPACE/TEST
+git add .
+git commit - m "message"
+git push -u origin master
