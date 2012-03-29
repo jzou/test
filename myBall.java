@@ -4,7 +4,7 @@ import acm.program.GraphicsProgram;
 
 public class myBall extends GraphicsProgram {
 	
-	private static final int R_BALL = 30;
+	private static final double R_BALL = 30;
 	
 	private static final double GRAVITY = 3;
 	
@@ -22,13 +22,16 @@ public class myBall extends GraphicsProgram {
 	
 	private double yvel = 0.0;
 	
-	private GOval ball;
-	
+	//private GOval ball;
+	private GFace ball;
 	public void run () {
-	    
-		setup();
 		
+		setup();
+		System.out.println("width1:" +getWidth());
+		resize(600, 600); // TODO Why sometimes resize works? and sometimes not?
+		System.out.println("width2:" +getWidth());
 		double width = getWidth();
+		System.out.println("width3:" +getWidth());
 		while (ball.getX() < width) {
 			moveBall();
 			checkForCollision();
@@ -36,10 +39,23 @@ public class myBall extends GraphicsProgram {
 		}		
 	}
 	
-	private void setup (){
+	/**
+	 * setup GOval
+	 */
+/*	private void setup (){
 		ball = new GOval (X_START, Y_START, R_BALL/2, R_BALL/2);
 		ball.setFilled(true);
+
 		add(ball);
+	}
+*/	
+	
+	/**
+	 * setup GFace
+	 */
+	private void setup() {
+		ball = new GFace(R_BALL/2, R_BALL/2);
+		add(ball, X_START, Y_START);
 	}
 	
 	private void moveBall (){	
