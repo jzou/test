@@ -25,17 +25,15 @@ public class myBall extends GraphicsProgram {
 	//private GOval ball;
 	private GFace ball;
 	public void run () {
-		
+
+		resize(600, 600); 
+		pause(DELAY); // To make sure resize() works
 		setup();
-		System.out.println("width1:" +getWidth());
-		resize(600, 600); // TODO Why sometimes resize works? and sometimes not?
-		System.out.println("width2:" +getWidth());
-		double width = getWidth();
-		System.out.println("width3:" +getWidth());
-		while (ball.getX() < width) {
+
+		while (ball.getX() < getWidth()) {
 			moveBall();
 			checkForCollision();
-			pause(DELAY);
+			pause(DELAY); // To make sure the move can be seen
 		}		
 	}
 	

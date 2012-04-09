@@ -50,6 +50,7 @@ public class clickFace extends GraphicsProgram {
 		add(sm, SOUTH);
 		add(med, SOUTH);
 		add(lrg, SOUTH);
+
 	}
 	
 	private void initComboBox(){

@@ -30,7 +30,8 @@ public class textAndGraphic extends ConsoleProgram {
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		String str = "Black"; // TODO Why JTextField does not work?
+		String str = "Black"; // TODO Why JTextField cannot be shown?
+		
 		if (e.getSource() == color) {
 			str = color.getText();
 			println(str);
